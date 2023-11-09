@@ -1,5 +1,4 @@
 <script setup>
-import TheMain from '@/views/TheMain.vue';
 import THeHeader from '@/components/common/TheHeader.vue';
 
 

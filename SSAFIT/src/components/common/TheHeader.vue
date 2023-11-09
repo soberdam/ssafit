@@ -22,7 +22,9 @@ import SearchComp from '../SearchComp.vue';
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* background-color: rgb(247, 237, 247); */
+    box-shadow: 0 0 20px 5px rgba(92, 99, 105, 0.2);
+    margin-bottom: 40px;
+    /* background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(187, 234, 255, 1) 100%); */
 }
 
 .main-link {
