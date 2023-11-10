@@ -3,21 +3,20 @@
         <div>
             <h2 class="main-h2"><span class="main-h2-span">SSAFIT</span>에 오신 것을 환영합니다.</h2>
         </div>
-    </div>
-    <hr />
-    <VideoList />
-    <div class="main-main">
-        <div>
+        <!-- <div>
             조회수 별 들어갈 곳
-        </div>
+        </div> -->
         <div>
-            <h3>추천 운동부위</h3>
             <button class="search-btn">전체</button>
             <button class="search-btn">하체</button>
             <button class="search-btn">상체</button>
             <button class="search-btn">복부</button>
             <button class="search-btn">전신</button>
         </div>
+    </div>
+    <VideoList />
+    <hr />
+    <div class="main-main">
         <div>
             <YoutubeVideoList />
         </div>
@@ -37,7 +36,7 @@ import YoutubeVideoList from '@/components/youtube/YoutubeVideoList.vue';
 <style scoped>
 .main-main {
     margin: 0 auto;
-    width: 1000px;
+    width: 1150px;
 }
 
 .main-h2 {
@@ -110,6 +109,7 @@ import YoutubeVideoList from '@/components/youtube/YoutubeVideoList.vue';
 .search-btn {
     margin-top: 3px;
     margin-left: 20px;
+    margin-bottom: 3px;
     color: #fff;
     width: 50px;
     height: 35px;
@@ -122,6 +122,7 @@ import YoutubeVideoList from '@/components/youtube/YoutubeVideoList.vue';
 
 .search-btn:hover {
     margin-top: 0px;
+    margin-bottom: 0px;
     width: 60px;
     height: 40px;
     background-color: rgb(55, 182, 140);

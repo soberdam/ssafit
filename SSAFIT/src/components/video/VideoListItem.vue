@@ -10,8 +10,8 @@
                 <div class="video-list-pcv">
                     <button class="search-btn">{{ video.part }}</button>
                     <div class="video-list-cv">
-                        <div>{{ video.channelName }}</div>
-                        <div>{{ video.viewCnt }}</div>
+                        <div class="video-cha">{{ video.channelName }}</div>
+                        <div class="video-cnt">조회수 : {{ video.viewCnt }}회</div>
                     </div>
                 </div>
             </div>
@@ -38,12 +38,24 @@ const props = defineProps({
 .video-list {
     border: solid #ccc;
     border-radius: 10px;
+    transition: 0.3s;
+    width: 360px;
+    height: 340px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.video-list:hover {
+    width: 370px;
+    height: 350px;
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
 
 .video-list-item {
     border-radius: 10px 10px 0px 0px;
-    width: 360px;
-    height: 240px;
+    width: 100%;
+    height: 60%;
     display: flex;
     flex-direction: column;
 }
@@ -69,10 +81,25 @@ const props = defineProps({
     align-items: end;
 }
 
+.video-cha {
+    color: #555;
+}
+
+.video-cnt {
+    color: #555;
+    font-size: 13px;
+}
+
 .item-a {
     height: 50px;
     font-size: 18px;
     cursor: pointer;
+    color: #555;
+    transition: 0.3s;
+}
+
+.item-a:hover {
+    color: rgb(225, 184, 221);
 }
 
 .search-btn {
@@ -82,12 +109,5 @@ const props = defineProps({
     border-radius: 10px;
     border: solid 2px rgb(225, 184, 221);
     background-color: rgb(225, 184, 221);
-    transition: 0.2s;
-    cursor: pointer;
-}
-
-.search-btn:hover {
-    background-color: rgb(182, 55, 152);
-    border: solid 2px rgb(182, 55, 152);
 }
 </style>
