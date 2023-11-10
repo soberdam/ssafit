@@ -3,12 +3,16 @@
         <div>
             <h2 class="main-h2"><span class="main-h2-span">SSAFIT</span>에 오신 것을 환영합니다.</h2>
         </div>
-        <hr />
+    </div>
+    <hr />
+    <VideoList />
+    <div class="main-main">
         <div>
             조회수 별 들어갈 곳
         </div>
         <div>
             <h3>추천 운동부위</h3>
+            <button class="search-btn">전체</button>
             <button class="search-btn">하체</button>
             <button class="search-btn">상체</button>
             <button class="search-btn">복부</button>
@@ -17,7 +21,6 @@
         <div>
             <YoutubeVideoList />
         </div>
-        <VideoList />
         <div class="slider">
             <div class="slide"></div>
             <div class="slide"></div>
