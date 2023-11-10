@@ -7,11 +7,11 @@
             조회수 별 들어갈 곳
         </div> -->
         <div>
-            <button class="search-btn">전체</button>
-            <button class="search-btn">하체</button>
-            <button class="search-btn">상체</button>
-            <button class="search-btn">복부</button>
-            <button class="search-btn">전신</button>
+            <input type="button" class="search-btn" value="전체" @click="changePart('none')" />
+            <input type="button" class="search-btn" value="하체" @click="changePart('하체')" />
+            <input type="button" class="search-btn" value="상체" @click="changePart('상체')" />
+            <input type="button" class="search-btn" value="복부" @click="changePart('복부')" />
+            <input type="button" class="search-btn" value="전신" @click="changePart('전신')" />
         </div>
     </div>
     <VideoList />
@@ -30,8 +30,24 @@
 
 <script setup>
 import VideoList from '@/components/video/VideoList.vue';
-import YoutubeVideoList from '@/components/youtube/YoutubeVideoList.vue';
+import { usevideoStore } from '@/stores/video'
 // import YoutubeVideoDetail from '../components/youtube/YoutubeVideoDetail.vue';
+import { ref, onMounted } from 'vue'
+onMounted(() => {
+    const part = 'none'
+    const orderBy = 'viewCnt'
+    store.getvideoList(part, orderBy)
+})
+const part = ref('none')
+const orderBy = ref('viewCnt')
+
+const store = usevideoStore()
+
+
+const changePart = function (newPart) {
+    part.value = newPart
+    store.getvideoList(part.value, orderBy.value)
+}
 </script>
 <style scoped>
 .main-main {

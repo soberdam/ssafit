@@ -1,6 +1,5 @@
 <template>
     <div class="video-list">
-        <!-- <button @click="store.getvideoList">전체</button> -->
         <ul class="list-ul">
             <VideoListItem v-for="video in store.videoList" :key="video.url" :video="video" />
         </ul>
@@ -12,6 +11,10 @@ import { onMounted } from 'vue';
 import { usevideoStore } from '@/stores/video'
 import VideoListItem from './VideoListItem.vue';
 const store = usevideoStore()
+
+defineProps({
+    videoList: Array
+});
 
 onMounted(() => {
     store.getvideoList();
