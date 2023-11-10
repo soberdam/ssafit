@@ -8,7 +8,7 @@ export const useYoutubeStore = defineStore("youtube", () => {
 
   const youtubeSearch = function (keyword) {
     const URL = "https://www.googleapis.com/youtube/v3/search";
-    const API_KEY = "AIzaSyDlpZ38aZfyD11G-lPGIF5wx19neS-83Tg";
+    const API_KEY = "AIzaSyCsulNT-SZJpAXtErDetArTuS1x7w8UUEo";
     axios({
       url: URL,
       method: "GET",

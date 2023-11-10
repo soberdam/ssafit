@@ -17,17 +17,16 @@
             <button class="search-btn">전신</button>
         </div>
         <div>
-            <!-- <h2>YoutubeView</h2> -->
-            <!-- <hr> -->
-            <!-- <YoutubeVideoDetail /> -->
             <YoutubeVideoList />
         </div>
+        <VideoList />
     </div>
 </template>
 
 <script setup>
+import VideoList from '@/components/video/VideoList.vue';
 import YoutubeVideoList from '@/components/youtube/YoutubeVideoList.vue';
-import YoutubeVideoDetail from '../components/youtube/YoutubeVideoDetail.vue';
+// import YoutubeVideoDetail from '../components/youtube/YoutubeVideoDetail.vue';
 </script>
 <style scoped>
 .main-main {
