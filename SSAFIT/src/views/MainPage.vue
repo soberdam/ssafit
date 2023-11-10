@@ -1,14 +1,12 @@
 <template>
     <div class="main-main">
-        <div class="slider">
-            <div class="slide"></div>
-            <div class="slide"></div>
-            <div class="slide"></div>
-        </div>
         <div>
             <h2 class="main-h2"><span class="main-h2-span">SSAFIT</span>에 오신 것을 환영합니다.</h2>
         </div>
         <hr />
+        <div>
+            조회수 별 들어갈 곳
+        </div>
         <div>
             <h3>추천 운동부위</h3>
             <button class="search-btn">하체</button>
@@ -20,6 +18,11 @@
             <YoutubeVideoList />
         </div>
         <VideoList />
+        <div class="slider">
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+        </div>
     </div>
 </template>
 
