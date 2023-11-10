@@ -41,15 +41,13 @@ const props = defineProps({
     transition: 0.3s;
     width: 360px;
     height: 340px;
-    margin-left: 20px;
-    margin-bottom: 20px;
+    margin: 10px;
 }
 
 .video-list:hover {
     width: 370px;
     height: 350px;
-    margin-left: 10px;
-    margin-bottom: 10px;
+    margin: 5px;
 }
 
 .video-list-item {

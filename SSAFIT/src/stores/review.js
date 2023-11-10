@@ -3,29 +3,28 @@ import { defineStore } from "pinia";
 import router from "@/router";
 import axios from "axios";
 
-const REST_review_API = `http://localhost:8080/api-review/review`;
+const REST_Review_API = `http://localhost:8080/api-review`;
 
-export const usereviewStore = defineStore("review", () => {
+export const useReviewStore = defineStore("review", () => {
   const reviewList = ref([]);
-  const getreviewList = function () {
-    axios.get(REST_review_API).then((response) => {
-      reviewList.value = response.data;
-      console.log(reviewList.value);
+  const getReviewList = function () {
+    axios.get(REST_Review_API).then((response) => {
+      ReviewList.value = response.data;
     });
   };
 
   //게시글 한개
   const review = ref({});
-  const getreview = function (id) {
-    axios.get(`${REST_review_API}/${id}`).then((response) => {
+  const getReview = function (id) {
+    axios.get(`${REST_Review_API}/${id}`).then((response) => {
       review.value = response.data;
     });
   };
 
   //게시글 등록
-  const createreview = function (review) {
+  const createReview = function (review) {
     axios({
-      url: REST_review_API,
+      url: REST_Review_API,
       method: "POST",
       //아래꺼 없어도 알아서 보내더라 axios 쵝오~
       headers: {
@@ -43,15 +42,15 @@ export const usereviewStore = defineStore("review", () => {
       });
   };
 
-  const updatereview = function () {
-    axios.put(REST_review_API, review.value).then(() => {
+  const updateReview = function () {
+    axios.put(REST_Review_API, review.value).then(() => {
       router.push({ name: "reviewList" });
     });
   };
 
-  const searchreviewList = function (searchCondition) {
+  const searchReviewList = function (searchCondition) {
     axios
-      .get(REST_review_API, {
+      .get(REST_Review_API, {
         params: searchCondition,
       })
       .then((res) => {
@@ -61,11 +60,11 @@ export const usereviewStore = defineStore("review", () => {
 
   return {
     reviewList,
-    getreviewList,
+    getReviewList,
     review,
-    getreview,
-    createreview,
-    updatereview,
-    searchreviewList,
+    getReview,
+    createReview,
+    updateReview,
+    searchReviewList,
   };
 });

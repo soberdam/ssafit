@@ -24,6 +24,33 @@ const router = createRouter({
       name: "my",
       component: () => import("../views/MyPage.vue"),
     },
+    /* {
+      path: '/board',
+      name: 'board',
+      component: BoardView,
+      children: [
+        {
+          path: "",
+          name: "boardList",
+          component: BoardList
+        },
+        {
+          path: "create",
+          name: "boardCreate",
+          component: BoardCreate
+        },
+        {
+          path: ":id",
+          name: "boardDetail",
+          component: BoardDetail
+        },
+        {
+          path: "update",
+          name: "boardUpdate",
+          component: BoardUpdate
+        },
+      ]
+    }, */
   ],
 });
 
