@@ -13,6 +13,7 @@ const keyword = ref('')
 
 const store = useYoutubeStore()
 
+// @keydown="search"
 const search = function () {
     store.youtubeSearch(keyword.value)
 }

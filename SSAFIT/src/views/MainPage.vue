@@ -8,11 +8,18 @@
         <div>
             <h2 class="main-h2"><span class="main-h2-span">SSAFIT</span>에 오신 것을 환영합니다.</h2>
         </div>
+        <hr />
+        <div>
+            <h3>추천 운동부위</h3>
+            <button class="search-btn">하체</button>
+            <button class="search-btn">상체</button>
+            <button class="search-btn">복부</button>
+            <button class="search-btn">전신</button>
+        </div>
         <div>
             <!-- <h2>YoutubeView</h2> -->
             <!-- <hr> -->
             <!-- <YoutubeVideoDetail /> -->
-            <hr />
             <YoutubeVideoList />
         </div>
     </div>
@@ -93,5 +100,26 @@ import YoutubeVideoDetail from '../components/youtube/YoutubeVideoDetail.vue';
     100% {
         transform: translateX(0);
     }
+}
+
+.search-btn {
+    margin-top: 3px;
+    margin-left: 20px;
+    color: #fff;
+    width: 50px;
+    height: 35px;
+    border-radius: 10px;
+    border: solid 2px rgb(184, 225, 211);
+    background-color: rgb(184, 225, 211);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    margin-top: 0px;
+    width: 60px;
+    height: 40px;
+    background-color: rgb(55, 182, 140);
+    border: solid 2px rgb(55, 182, 140);
 }
 </style>
